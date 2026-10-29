@@ -1,0 +1,215 @@
+! name: Tinfoil Corner
+! description: For fun. Surfaces conspiracy theories, joke conspiracies, tinfoil blogs, doomers, preppers, ancient-alien and fringe-history sites, plus the wikis and forums that catalogue them. Mutes travel and fact-sheet boilerplate so the weird stuff floats up.
+! public: true
+! author: Igor Netto
+! avatar: #5B2A86
+
+! NOTE: A Goggle only re-ranks results Brave already found for your query.
+! It matches domains and URL text (not page content), so most of the magic
+! below is "boost URLs that contain conspiracy-ish words" plus a curated
+! list of sites. Weight scale: boost/downrank 1-4.
+
+! =========================================================
+! CATALOGUES OF WEIRD IDEAS: meme, fringe and skeptic wikis
+! =========================================================
+$boost=4,site=knowyourmeme.com
+$boost=4,site=kookscience.com
+$boost=4,site=skeptoid.com
+
+! =========================================================
+! URL KEYWORDS: anything whose address smells fringe
+! =========================================================
+! Core conspiracy vocabulary (English plus common URL-friendly forms
+! in other languages)
+conspiracy$boost=4
+conspiracies$boost=4
+conspiracion$boost=4
+conspiracao$boost=4
+cospirazione$boost=4
+complotto$boost=4
+complot$boost=4
+complottheorie$boost=4
+verschwoerung$boost=4
+verschwoerungstheorie$boost=4
+konspiration$boost=4
+konspirasjon$boost=4
+salaliitto$boost=4
+spisek$boost=3
+cover-up$boost=3
+coverup$boost=3
+cover_up$boost=3
+false-flag$boost=3
+false_flag$boost=3
+deep-state$boost=3
+deep_state$boost=3
+new-world-order$boost=3
+new_world_order$boost=3
+illuminati$boost=3
+tinfoil$boost=3
+truther$boost=3
+hoax$boost=3
+chemtrail$boost=3
+mandela-effect$boost=3
+mandela_effect$boost=3
+simulation-theory$boost=3
+simulation_theory$boost=3
+does-not-exist$boost=3
+does_not_exist$boost=3
+doesnt-exist$boost=3
+is-not-real$boost=3
+is-fake$boost=3
+pseudoscience$boost=3
+pseudohistory$boost=3
+pseudoarchaeology$boost=3
+fringe$boost=2
+
+! Ancient aliens, UFOs, lost civilizations, cryptids
+ancient-alien$boost=4
+ancient_alien$boost=4
+ancient-astronaut$boost=4
+ancient_astronaut$boost=4
+ancientaliens$boost=4
+lost-civilization$boost=3
+lost_civilization$boost=3
+atlantis$boost=3
+lemuria$boost=3
+hyperborea$boost=3
+hollow-earth$boost=3
+hollow_earth$boost=3
+flat-earth$boost=3
+flat_earth$boost=3
+flatearth$boost=3
+ufo$boost=3
+uap-$boost=2
+alien-abduction$boost=3
+roswell$boost=3
+area-51$boost=3
+area_51$boost=3
+cryptid$boost=3
+cryptozoology$boost=3
+bigfoot$boost=3
+sasquatch$boost=3
+paranormal$boost=2
+
+! Doomsday and prepping
+doomsday$boost=3
+doomer$boost=3
+apocalypse$boost=2
+end-times$boost=3
+end_times$boost=3
+prepper$boost=3
+preppers$boost=3
+prepping$boost=3
+survivalism$boost=3
+bug-out$boost=3
+bugout$boost=3
+shtf$boost=3
+off-grid$boost=2
+societal-collapse$boost=3
+economic-collapse$boost=3
+
+! Subreddits (also matches Reddit front-end mirrors)
+/r/conspiracy$boost=4
+/r/ufos$boost=4
+/r/aliens$boost=3
+/r/ancientaliens$boost=4
+/r/highstrangeness$boost=4
+/r/paranormal$boost=3
+/r/bigfoot$boost=3
+/r/flatearth$boost=3
+/r/preppers$boost=4
+/r/collapse$boost=4
+/r/doomsdayprepping$boost=3
+/r/conspiracytheories$boost=4
+/r/mandelaeffect$boost=3
+/r/simulationtheory$boost=3
+/r/hollowearth$boost=3
+
+! Wikipedia article and category titles worth surfacing
+Conspiracy_theor$boost=4
+Pseudoarchaeology$boost=3
+Ancient_astronaut$boost=4
+Fringe_theor$boost=3
+Hoax$boost=2
+Internet_meme$boost=2
+Survivalism$boost=3
+Doomsday$boost=3
+Cryptozoology$boost=3
+Unidentified_flying_object$boost=3
+
+! =========================================================
+! SITES: catalogues, wikis and forums of the weird
+! =========================================================
+$boost=3,site=rationalwiki.org
+$boost=3,site=fortean.com
+$boost=3,site=forteantimes.com
+$boost=3,site=cryptomundo.com
+$boost=3,site=bfro.net
+$boost=3,site=metabunk.org
+$boost=2,site=snopes.com
+$boost=2,site=reddit.com
+
+! =========================================================
+! SITES: ancient aliens, lost history, UFOs, paranormal
+! =========================================================
+$boost=4,site=ancient-origins.net
+$boost=4,site=ancient-code.com
+$boost=4,site=grahamhancock.com
+$boost=4,site=coasttocoastam.com
+$boost=4,site=theblackvault.com
+$boost=4,site=disclose.tv
+$boost=4,site=unexplained-mysteries.com
+$boost=4,site=abovetopsecret.com
+$boost=4,site=godlikeproductions.com
+$boost=3,site=mysteriousuniverse.org
+$boost=3,site=worldmysteries.com
+$boost=3,site=ufoevidence.org
+$boost=3,site=mufon.com
+$boost=3,site=gaia.com
+$boost=3,site=beforeitsnews.com
+$boost=3,site=thevaultofknowledge.com
+
+! =========================================================
+! SITES: flat earth and other cosmology the textbooks missed
+! =========================================================
+$boost=4,site=tfes.org
+$boost=4,site=theflatearthsociety.org
+
+! =========================================================
+! SITES: doomers and preppers
+! =========================================================
+$boost=4,site=survivalblog.com
+$boost=4,site=theorganicprepper.com
+$boost=4,site=theeconomiccollapseblog.com
+$boost=4,site=endoftheamericandream.com
+$boost=4,site=zerohedge.com
+$boost=3,site=thesurvivalmom.com
+$boost=3,site=offgridsurvival.com
+$boost=3,site=survivopedia.com
+$boost=3,site=backdoorsurvival.com
+$boost=3,site=apartmentprepper.com
+$boost=3,site=modernsurvivalonline.com
+$boost=3,site=doomandbloom.net
+$boost=3,site=theprepared.com
+$boost=3,site=peakprosperity.com
+$boost=3,site=kunstler.com
+
+! =========================================================
+! MUTE: travel boilerplate and encyclopedias
+! (so a place name stops returning only tour packages and fact sheets)
+! =========================================================
+$discard,site=tripadvisor.com
+$discard,site=lonelyplanet.com
+$discard,site=booking.com
+$discard,site=expedia.com
+$discard,site=britannica.com
+$discard,site=worldatlas.com
+$discard,site=countryreports.org
+
+! =========================================================
+! DISCARD: pure spam, so the quality tinfoil can shine
+! =========================================================
+$discard,site=pinterest.com
+$discard,site=quora.com
+$discard,site=europesays.com
+$discard,site=news-pravda.com
