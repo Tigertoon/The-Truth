@@ -51,6 +51,40 @@ $boost=3,site=gaia.com
 $boost=3,site=beforeitsnews.com
 $boost=3,site=thevaultofknowledge.com
 
+$boost=5,site=naturalnews.com
+$boost=5,site=newstarget.com
+$boost=5,site=mercola.com
+$boost=5,site=childrenshealthdefense.org
+$boost=5,site=greenmedinfo.com
+$boost=5,site=healthimpactnews.com
+$boost=5,site=healthnutnews.com
+$boost=5,site=foodbabe.com
+$boost=5,site=collective-evolution.com
+$boost=5,site=geoengineeringwatch.org
+$boost=5,site=bibliotecapleyades.net
+$boost=5,site=earthfiles.com
+$boost=5,site=mysteriousuniverse.org
+$boost=5,site=world-mysteries.com
+$boost=5,site=nexusmagazine.com
+$boost=5,site=coasttocoastam.com
+$boost=5,site=infowars.com
+$boost=5,site=newswars.com
+$boost=5,site=prisonplanet.com
+$boost=5,site=beforeitsnews.com
+$boost=5,site=davidicke.com
+$boost=5,site=disclose.tv
+$boost=5,site=sott.net
+$boost=5,site=veteranstoday.com
+$boost=5,site=t$boost=5,site=hegatewaypundit.com
+$boost=5,site=globalresearch.ca
+$boost=5,site=unz.com
+$boost=5,site=21stcenturywire.com
+$boost=5,site=zerohedge.com
+$boost=5,site=banned.video
+$boost=5,site=brighteon.com
+$boost=5,site=bitchute.com
+$boost=5,site=theeventchronicle.com
+
 ! =========================================================
 ! SITES: flat earth and other cosmology the textbooks missed
 ! =========================================================
