@@ -9,6 +9,8 @@
 ! below is "boost URLs that contain conspiracy-ish words" plus a curated
 ! list of sites. Weight scale: boost/downrank 1-4.
 
+! discard everything else
+$discard
 ! =========================================================
 ! CATALOGUES OF WEIRD IDEAS: meme, fringe and skeptic wikis
 ! =========================================================
