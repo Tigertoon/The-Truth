@@ -109,10 +109,11 @@ societal-collapse$boost=3
 economic-collapse$boost=3
 
 ! Subreddits (also matches Reddit front-end mirrors)
-/r/conspiracy$boost=4
-/r/ufos$boost=4
-/r/aliens$boost=3
-/r/ancientaliens$boost=4
+$downrank=3,site=reddit.com
+/r/conspiracy$boost=5
+/r/ufos$boost=5
+/r/aliens$boost=5
+/r/ancientaliens$boost=5
 /r/highstrangeness$boost=4
 /r/paranormal$boost=3
 /r/bigfoot$boost=3
@@ -124,6 +125,7 @@ economic-collapse$boost=3
 /r/mandelaeffect$boost=3
 /r/simulationtheory$boost=3
 /r/hollowearth$boost=3
+r/SpiritualWarfare$boost=5
 
 ! Wikipedia article and category titles worth surfacing
 Conspiracy_theor$boost=4
@@ -147,7 +149,6 @@ $boost=3,site=cryptomundo.com
 $boost=3,site=bfro.net
 $boost=3,site=metabunk.org
 $boost=2,site=snopes.com
-$boost=2,site=reddit.com
 
 ! =========================================================
 ! SITES: ancient aliens, lost history, UFOs, paranormal
