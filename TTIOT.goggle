@@ -1,22 +1,80 @@
 ! name: Tinfoil Corner
-! description: For fun. Surfaces conspiracy theories, joke conspiracies, tinfoil blogs, doomers, preppers, ancient-alien and fringe-history sites, plus the wikis and forums that catalogue them. Mutes travel and fact-sheet boilerplate so the weird stuff floats up.
+! description: Surfaces conspiracy theories, joke conspiracies, tinfoil blogs, doomers, preppers, ancient-alien and fringe-history sites, plus the wikis and forums that catalogue them. Mutes travel and fact-sheet boilerplate so the weird stuff floats up.
 ! public: true
 ! author: Igor Netto
 ! avatar: #5B2A86
 
-! NOTE: A Goggle only re-ranks results Brave already found for your query.
-! It matches domains and URL text (not page content), so most of the magic
-! below is "boost URLs that contain conspiracy-ish words" plus a curated
+! NOTE: 
+! "boost URLs that contain conspiracy-ish words" plus a curated
 ! list of sites. Weight scale: boost/downrank 1-4.
+! The truth is out there
 
 ! discard everything else
 $discard
+
 ! =========================================================
 ! CATALOGUES OF WEIRD IDEAS: meme, fringe and skeptic wikis
 ! =========================================================
 $boost=4,site=knowyourmeme.com
 $boost=4,site=kookscience.com
 $boost=4,site=skeptoid.com
+
+! =========================================================
+! SITES: catalogues, wikis and forums of the weird
+! =========================================================
+$boost=3,site=rationalwiki.org
+$boost=3,site=fortean.com
+$boost=3,site=forteantimes.com
+$boost=3,site=cryptomundo.com
+$boost=3,site=bfro.net
+$boost=3,site=metabunk.org
+$boost=2,site=snopes.com
+
+! =========================================================
+! SITES: ancient aliens, lost history, UFOs, paranormal
+! =========================================================
+$boost=5,site=denyignorance.com
+$boost=4,site=ancient-origins.net
+$boost=4,site=ancient-code.com
+$boost=4,site=grahamhancock.com
+$boost=4,site=coasttocoastam.com
+$boost=4,site=theblackvault.com
+$boost=4,site=disclose.tv
+$boost=4,site=unexplained-mysteries.com
+$boost=4,site=abovetopsecret.com
+$boost=4,site=godlikeproductions.com
+$boost=3,site=mysteriousuniverse.org
+$boost=3,site=worldmysteries.com
+$boost=3,site=ufoevidence.org
+$boost=3,site=mufon.com
+$boost=3,site=gaia.com
+$boost=3,site=beforeitsnews.com
+$boost=3,site=thevaultofknowledge.com
+
+! =========================================================
+! SITES: flat earth and other cosmology the textbooks missed
+! =========================================================
+$boost=4,site=tfes.org
+$boost=4,site=theflatearthsociety.org
+
+! =========================================================
+! SITES: doomers and preppers
+! =========================================================
+$boost=4,site=survivalblog.com
+$boost=4,site=theorganicprepper.com
+$boost=4,site=theeconomiccollapseblog.com
+$boost=4,site=endoftheamericandream.com
+$boost=4,site=zerohedge.com
+$boost=3,site=thesurvivalmom.com
+$boost=3,site=offgridsurvival.com
+$boost=3,site=survivopedia.com
+$boost=3,site=backdoorsurvival.com
+$boost=3,site=apartmentprepper.com
+$boost=3,site=modernsurvivalonline.com
+$boost=3,site=doomandbloom.net
+$boost=3,site=theprepared.com
+$boost=3,site=peakprosperity.com
+$boost=3,site=kunstler.com
 
 ! =========================================================
 ! URL KEYWORDS: anything whose address smells fringe
@@ -111,7 +169,7 @@ societal-collapse$boost=3
 economic-collapse$boost=3
 
 ! Subreddits (also matches Reddit front-end mirrors)
-$downrank=3,site=reddit.com
+$downrank=5,site=reddit.com
 /r/conspiracy$boost=5
 /r/ufos$boost=5
 /r/aliens$boost=5
@@ -127,7 +185,7 @@ $downrank=3,site=reddit.com
 /r/mandelaeffect$boost=3
 /r/simulationtheory$boost=3
 /r/hollowearth$boost=3
-r/SpiritualWarfare$boost=5
+/r/SpiritualWarfare$boost=5
 
 ! Wikipedia article and category titles worth surfacing
 Conspiracy_theor$boost=4
@@ -142,63 +200,6 @@ Cryptozoology$boost=3
 Unidentified_flying_object$boost=3
 
 ! =========================================================
-! SITES: catalogues, wikis and forums of the weird
-! =========================================================
-$boost=3,site=rationalwiki.org
-$boost=3,site=fortean.com
-$boost=3,site=forteantimes.com
-$boost=3,site=cryptomundo.com
-$boost=3,site=bfro.net
-$boost=3,site=metabunk.org
-$boost=2,site=snopes.com
-
-! =========================================================
-! SITES: ancient aliens, lost history, UFOs, paranormal
-! =========================================================
-$boost=5,site=denyignorance.com
-$boost=4,site=ancient-origins.net
-$boost=4,site=ancient-code.com
-$boost=4,site=grahamhancock.com
-$boost=4,site=coasttocoastam.com
-$boost=4,site=theblackvault.com
-$boost=4,site=disclose.tv
-$boost=4,site=unexplained-mysteries.com
-$boost=4,site=abovetopsecret.com
-$boost=4,site=godlikeproductions.com
-$boost=3,site=mysteriousuniverse.org
-$boost=3,site=worldmysteries.com
-$boost=3,site=ufoevidence.org
-$boost=3,site=mufon.com
-$boost=3,site=gaia.com
-$boost=3,site=beforeitsnews.com
-$boost=3,site=thevaultofknowledge.com
-
-! =========================================================
-! SITES: flat earth and other cosmology the textbooks missed
-! =========================================================
-$boost=4,site=tfes.org
-$boost=4,site=theflatearthsociety.org
-
-! =========================================================
-! SITES: doomers and preppers
-! =========================================================
-$boost=4,site=survivalblog.com
-$boost=4,site=theorganicprepper.com
-$boost=4,site=theeconomiccollapseblog.com
-$boost=4,site=endoftheamericandream.com
-$boost=4,site=zerohedge.com
-$boost=3,site=thesurvivalmom.com
-$boost=3,site=offgridsurvival.com
-$boost=3,site=survivopedia.com
-$boost=3,site=backdoorsurvival.com
-$boost=3,site=apartmentprepper.com
-$boost=3,site=modernsurvivalonline.com
-$boost=3,site=doomandbloom.net
-$boost=3,site=theprepared.com
-$boost=3,site=peakprosperity.com
-$boost=3,site=kunstler.com
-
-! =========================================================
 ! MUTE: travel boilerplate and encyclopedias
 ! (so a place name stops returning only tour packages and fact sheets)
 ! =========================================================
@@ -210,10 +211,3 @@ $discard,site=britannica.com
 $discard,site=worldatlas.com
 $discard,site=countryreports.org
 
-! =========================================================
-! DISCARD: pure spam, so the quality tinfoil can shine
-! =========================================================
-$discard,site=pinterest.com
-$discard,site=quora.com
-$discard,site=europesays.com
-$discard,site=news-pravda.com
